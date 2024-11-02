@@ -1,0 +1,25 @@
+### 200 user
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "firstName": "Test",
+    "lastName":"Testovych",
+    "email":"mail@mail",
+    "birthday":"2000-01-01",
+    "gender":"male",
+    "workExperience": 3
+}
+
+### 500 (422)
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "firstName": "test",
+    "lastName":"Testovych",
+    "email":"mail@mail",
+    "birthday":"2000-01-01",
+    "gender":"male",
+    "workExperience": 3
+}

@@ -1,0 +1,51 @@
+### 200
+PATCH http://localhost:5000/api/users/672642f65280936e5ee68320
+Content-Type: application/json
+
+{
+    "firstName": "Updated",
+    "lastName": "User",
+    "email": "updated@mail.com",
+    "birthday": "1995-05-15",
+    "gender": "female",
+    "workExperience": 5
+}
+
+### 404
+PATCH http://localhost:5000/api/users/672642f65280936e5ee68321
+Content-Type: application/json
+
+{
+    "firstName": "Updated",
+    "lastName": "User",
+    "email": "updated@mail.com",
+    "birthday": "1995-05-15",
+    "gender": "female",
+    "workExperience": 5
+}
+
+### 500 -> 422
+PATCH http://localhost:5000/api/users/672642f65280936e5ee68320
+Content-Type: application/json
+
+{
+    "firstName": "updated",
+    "lastName": "User",
+    "email": "updated@mail.com",
+    "birthday": "1995-05-15",
+    "gender": "female",
+    "workExperience": 5
+}
+
+### 500 -> 422
+PATCH http://localhost:5000/api/users/1
+Content-Type: application/json
+
+{
+    "firstName": "Updated",
+    "lastName": "User",
+    "email": "updated@mail.com",
+    "birthday": "1995-05-15",
+    "gender": "female",
+    "workExperience": 5
+}
