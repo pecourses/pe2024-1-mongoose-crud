@@ -1,0 +1,31 @@
+### 201 {post}
+POST http://localhost:5000/api/users/672642f65280936e5ee68320/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "body": "Post 2"
+}
+
+### 500 -> 422
+POST http://localhost:5000/api/users/672642f65280936e5ee68320/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "body": "P"
+}
+
+### 404 User Not Found
+POST http://localhost:5000/api/users/672642f65280936e5ee68321/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "body": "Post 2"
+}
+
+### 500 -> 422 
+POST http://localhost:5000/api/users/0/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "body": "Post 2"
+}
