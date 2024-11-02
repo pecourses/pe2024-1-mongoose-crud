@@ -1,0 +1,19 @@
+{
+  "development": {
+    "host": "localhost",
+    "port": 27017,
+    "dbName": "chat"
+  },
+  "test": {
+    "host": "localhost",
+    "port": 27017,
+    "dbName": "chat"
+  },
+  "production": {
+    "host": "localhost",
+    "port": 27017,
+    "dbName": "chat",
+    "user": "",
+    "password": ""
+  }
+}
